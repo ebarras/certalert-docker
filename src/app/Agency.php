@@ -8,6 +8,6 @@ class Agency extends Model
 {
     public function agreements() 
     {
-    	return $this->hasMany('App\Agreement')
+    	return $this->hasMany('App\Agreement');
     }
 }

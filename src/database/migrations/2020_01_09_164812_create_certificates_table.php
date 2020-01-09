@@ -16,8 +16,8 @@ class CreateCertificatesTable extends Migration
         Schema::create('certificates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('subject');
-            $table->dateTime('expiration_date');
-            $table->dateTime('valid_from_date');
+            $table->dateTimeTz('expiration_date');
+            $table->dateTimeTz('valid_from_date');
             $table->string('issuer');
             $table->string('fingerprint');
             $table->json('san')->nullable();
